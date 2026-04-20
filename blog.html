@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Journal &#x2014; Adventure 101 Tour</title>
+  <meta name="description" content="The Adventure 101 Journal &#x2014; travel stories, destination guides, trip reports, and insider tips from Nigeria and across Africa." />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav"></header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-label="Page header">
+    <div class="page-hero__bg">
+      <img src="images/wildlife_safari.png" alt="Elephant safari scene at golden hour in Africa" loading="eager" />
+    </div>
+    <div class="page-hero__overlay"></div>
+    <div class="page-hero__content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep" aria-hidden="true">&#x203A;</span>
+        <span class="breadcrumb__current">Journal</span>
+      </nav>
+      <h1>The Adventure<br><em>Journal</em></h1>
+      <p class="page-hero__subtitle">Travel stories, tips, and inspiration.</p>
+    </div>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="page-section" aria-labelledby="journal-heading">
+    <div class="container">
+
+      <div class="section-intro reveal">
+        <span class="label">From the Field</span>
+        <h2 id="journal-heading">Stories Worth Reading</h2>
+        <p>Our team writes about the places we visit, the people we meet, and the lessons every journey teaches. Honest, first-hand, and always worth your time.</p>
+      </div>
+
+      <div class="blog-grid">
+
+        <article class="blog-card reveal" style="--reveal-delay:0s">
+          <div class="blog-card__img-wrap">
+            <img src="images/zanzibar_real.png" alt="Pristine white sand beach and crystal blue water in Zanzibar" loading="lazy" />
+            <span class="blog-card__category">Destination Guide</span>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__date">March 2026</span>
+            <h3>Why Zanzibar Should Be on Every African Traveller's Bucket List</h3>
+            <p>From the turquoise waters of Nungwi Beach to the historic Stone Town, Zanzibar offers a sensory experience unlike anywhere else in Africa. Here's everything you need to know before you go.</p>
+            <a href="#" class="blog-card__read-more" aria-label="Read more about Zanzibar travel guide">
+              Read More
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="5 12 19 12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal" style="--reveal-delay:0.1s">
+          <div class="blog-card__img-wrap">
+            <img src="images/obudu1_converted.jpg" alt="Rolling green hills and cool mist at Obudu Mountain" loading="lazy" />
+            <span class="blog-card__category">Trip Report</span>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__date">February 2026</span>
+            <h3>Obudu Mountain Retreat: Nigeria's Best Kept Secret</h3>
+            <p>At nearly 1,600 metres above sea level, the Obudu Cattle Ranch sits in the hills of Cross River State, offering temperatures and scenery that feel nothing like Nigeria. We took a group there &#x2014; here's what happened.</p>
+            <a href="#" class="blog-card__read-more" aria-label="Read more about Obudu Mountain Retreat trip report">
+              Read More
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="5 12 19 12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="blog-card reveal" style="--reveal-delay:0.2s">
+          <div class="blog-card__img-wrap">
+            <img src="images/hike_abuja.jpg" alt="Group of hikers on granite boulders with Abuja skyline in distance" loading="lazy" />
+            <span class="blog-card__category">Adventure Tips</span>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__date">January 2026</span>
+            <h3>5 Things to Know Before Joining a Group Hiking Tour in Nigeria</h3>
+            <p>Hiking with a group is one of the best ways to explore Nigeria's dramatic landscapes. But there are a few things you should know before you lace up your boots and head out.</p>
+            <a href="#" class="blog-card__read-more" aria-label="Read more about group hiking tips in Nigeria">
+              Read More
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="5 12 19 12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <div style="text-align:center;margin-top:var(--space-10);padding:var(--space-6);border:1px dashed var(--color-border);border-radius:var(--radius-lg);">
+        <p style="font-size:var(--text-sm);color:var(--color-text-faint);max-width:none;">
+          More stories coming soon &#x2014; follow us on
+          <a href="https://www.instagram.com/adventure101tour" target="_blank" rel="noopener" style="color:var(--color-primary);">@adventure101tour</a>
+          for real-time updates.
+        </p>
+      </div>
+
+      <!-- NEWSLETTER STRIP -->
+      <div class="newsletter-strip reveal" style="--reveal-delay:0.15s">
+        <span class="label">Stay in the Loop</span>
+        <h2>Never Miss a Trip</h2>
+        <p>Get travel inspiration, trip updates, and early access to new tours delivered straight to your inbox.</p>
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <input type="email" name="email" id="newsletterEmail" placeholder="your@email.com" aria-label="Email address for newsletter" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <p id="newsletterMsg" style="display:none;font-size:var(--text-xs);color:#16a34a;margin-top:var(--space-3);font-weight:600;">
+          You're in! We'll keep you posted on all upcoming adventures.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPLORE CTA -->
+  <section class="page-section page-section--alt" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(var(--space-10),5vw,var(--space-16));align-items:center;" id="blogCta">
+        <div>
+          <span class="label">Ready to Go?</span>
+          <h2 id="cta-heading" style="font-size:var(--text-2xl);font-weight:800;color:var(--color-text);margin-bottom:var(--space-4);">Reading is just the beginning</h2>
+          <p style="color:var(--color-text-muted);margin-bottom:var(--space-6);line-height:1.7;">The best stories start with saying yes. Browse our current tours and experiences &#x2014; and let us handle everything else.</p>
+          <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;">
+            <a href="tours.html" class="btn btn--primary">Browse All Tours</a>
+            <a href="contact.html" class="btn btn--ghost">Get in Touch</a>
+          </div>
+        </div>
+        <div style="position:relative;border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;">
+          <img src="images/zanzibar_tour.png" alt="Zanzibar dhow sailboat on turquoise water" loading="lazy" style="width:100%;height:100%;object-fit:cover;" />
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,8,5,0.4) 0%,transparent 60%);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="site-footer" class="footer"></footer>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    (function () {
+      'use strict';
+      var form = document.getElementById('newsletterForm');
+      var msg = document.getElementById('newsletterMsg');
+      var input = document.getElementById('newsletterEmail');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          if (!input.value.trim() || !input.value.includes('@')) {
+            input.style.borderColor = '#ef4444';
+            input.addEventListener('input', function () { input.style.borderColor = ''; }, { once: true });
+            return;
+          }
+          form.style.display = 'none';
+          if (msg) msg.style.display = 'block';
+        });
+      }
+      // Responsive CTA grid
+      var ctaGrid = document.getElementById('blogCta');
+      function checkBreak() {
+        if (ctaGrid) ctaGrid.style.gridTemplateColumns = window.innerWidth < 720 ? '1fr' : '1fr 1fr';
+      }
+      window.addEventListener('resize', checkBreak, { passive: true });
+      checkBreak();
+    })();
+  </script>
+
+</body>
+</html>

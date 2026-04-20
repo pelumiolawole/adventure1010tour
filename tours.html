@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tours — Adventure 101 Tour</title>
+  <meta name="description" content="Explore our curated tours and travel experiences — from Obudu Mountain to Zanzibar, West Africa road trips, safaris, and art &amp; culture journeys." />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+  <!-- NAV injected by components.js -->
+  <header class="nav" id="nav"></header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-label="Page header">
+    <div class="page-hero__bg">
+      <img src="images/obudu1_converted.jpg" alt="Scenic green hills at Obudu Mountain" loading="eager" />
+    </div>
+    <div class="page-hero__overlay"></div>
+    <div class="page-hero__content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep" aria-hidden="true">&#x203A;</span>
+        <span class="breadcrumb__current">Tours</span>
+      </nav>
+      <h1>Our Tours &amp;<br><em>Experiences</em></h1>
+    </div>
+  </section>
+
+  <!-- UPCOMING FEATURED TOUR -->
+  <section class="page-section" aria-labelledby="featured-heading">
+    <div class="container">
+      <div class="section-intro reveal">
+        <span class="label">Now Open to Bookings</span>
+        <h2 id="featured-heading">Upcoming Featured Tour</h2>
+        <p>Our signature multi-country road trip — an adventure you will be telling stories about for years.</p>
+      </div>
+
+      <div class="featured-tour reveal" style="--reveal-delay:0.1s">
+        <div class="featured-tour__bg">
+          <img src="images/hero_main.png" alt="Dramatic African savanna at golden hour" loading="lazy" />
+        </div>
+        <div class="featured-tour__overlay"></div>
+        <div class="featured-tour__content">
+          <div>
+            <div class="featured-tour__badges">
+              <span class="featured-tour__status">Now Open to Public</span>
+              <span class="featured-tour__type-badge">Road Trip</span>
+            </div>
+            <h2>West Africa Road Trip<br>Lagos to Ghana</h2>
+            <div class="featured-tour__route">
+              <span class="featured-tour__route-stop">Lagos, Nigeria</span>
+              <span class="featured-tour__route-arrow">&#x2192;</span>
+              <span class="featured-tour__route-stop">Cotonou, Benin Republic</span>
+              <span class="featured-tour__route-arrow">&#x2192;</span>
+              <span class="featured-tour__route-stop">Accra, Ghana</span>
+            </div>
+            <div class="featured-tour__meta">
+              <div class="featured-tour__meta-item">
+                <span class="featured-tour__meta-label">Departure</span>
+                <span class="featured-tour__meta-value">September 2026</span>
+              </div>
+              <div class="featured-tour__meta-item">
+                <span class="featured-tour__meta-label">Guests</span>
+                <span class="featured-tour__meta-value">Max 12 (Limited)</span>
+              </div>
+              <div class="featured-tour__meta-item">
+                <span class="featured-tour__meta-label">Countries</span>
+                <span class="featured-tour__meta-value">3 Nations</span>
+              </div>
+              <div class="featured-tour__meta-item">
+                <span class="featured-tour__meta-label">Type</span>
+                <span class="featured-tour__meta-value">Overland Road Trip</span>
+              </div>
+            </div>
+            <div class="featured-tour__ctas">
+              <a href="https://wa.me/2349098640296?text=Hello%20Adventure%20101%2C%20I%20want%20to%20book%20the%20West%20Africa%20Road%20Trip%20(Lagos%20to%20Ghana)%20in%20September%202026."
+                 class="btn btn--hero" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                WhatsApp to Book
+              </a>
+              <a href="contact.html" class="btn btn--hero-outline">Send an Enquiry</a>
+            </div>
+          </div>
+          <div class="featured-tour__price-box">
+            <div class="featured-tour__price-label">Pricing</div>
+            <span class="featured-tour__price-amount">Contact Us</span>
+            <div class="featured-tour__urgency">
+              Available in <strong>NGN &amp; USD</strong><br/>
+              Spots filling fast —<br/>only 12 seats total.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOUR CARDS GRID -->
+  <section class="page-section page-section--alt" aria-labelledby="tours-grid-heading">
+    <div class="container">
+      <div class="section-intro reveal">
+        <span class="label">Handpicked Experiences</span>
+        <h2 id="tours-grid-heading">Our Tours &amp; Adventures</h2>
+        <p>From Nigerian highlands to East African shores — every trip is a story worth telling.</p>
+      </div>
+
+      <div class="tours-grid">
+
+        <!-- Card 1: Obudu -->
+        <article class="tour-card reveal" style="--reveal-delay:0s">
+          <div class="tour-card__img-wrap">
+            <img src="images/obudu1_converted.jpg" alt="Scenic green hills at Obudu Mountain, Cross River State" loading="lazy" />
+            <span class="tour-card__badge">Signature Tour</span>
+          </div>
+          <div class="tour-card__body">
+            <div class="tour-card__meta">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Cross River State, Nigeria
+              <span class="tour-card__meta-sep">&#xB7;</span>
+              Weekend Getaway
+            </div>
+            <h3>Obudu Mountain Retreat</h3>
+            <p>Breathtaking highlands, cool mountain air, and rolling green hills at Obudu Cattle Ranch — one of Nigeria's most scenic destinations.</p>
+            <div class="tour-card__footer">
+              <div class="tour-card__price">
+                <span class="tour-card__price-label">From</span>
+                <span class="tour-card__price-amount">Contact for Pricing</span>
+              </div>
+              <a href="https://wa.me/2349098640296?text=Hello%20Adventure%20101%2C%20I%27m%20interested%20in%20the%20Obudu%20Mountain%20Retreat." class="btn btn--primary btn--sm" target="_blank" rel="noopener">Enquire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Zanzibar -->
+        <article class="tour-card reveal" style="--reveal-delay:0.08s">
+          <div class="tour-card__img-wrap">
+            <img src="images/zanzibar_real.png" alt="Pristine white sand beach and brilliant blue sky in Zanzibar" loading="lazy" />
+            <span class="tour-card__badge">Fan Favourite</span>
+          </div>
+          <div class="tour-card__body">
+            <div class="tour-card__meta">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Zanzibar, Tanzania
+              <span class="tour-card__meta-sep">&#xB7;</span>
+              Beach &amp; Culture
+            </div>
+            <h3>Zanzibar Island Escape</h3>
+            <p>Crystal clear waters, white sand beaches, and Swahili culture. A lovers' paradise — open to couples, friends, and group bookings.</p>
+            <div class="tour-card__footer">
+              <div class="tour-card__price">
+                <span class="tour-card__price-label">From</span>
+                <span class="tour-card__price-amount">Contact for Pricing</span>
+              </div>
+              <a href="https://wa.me/2349098640296?text=Hello%20Adventure%20101%2C%20I%27m%20interested%20in%20the%20Zanzibar%20Island%20Escape." class="btn btn--primary btn--sm" target="_blank" rel="noopener">Enquire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Abuja Hike -->
+        <article class="tour-card reveal" style="--reveal-delay:0.16s">
+          <div class="tour-card__img-wrap">
+            <img src="images/hike_abuja.jpg" alt="Group on dramatic granite boulders during Abuja hike" loading="lazy" />
+            <span class="tour-card__badge">Local Classic</span>
+          </div>
+          <div class="tour-card__body">
+            <div class="tour-card__meta">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Abuja, Nigeria
+              <span class="tour-card__meta-sep">&#xB7;</span>
+              Day Experience
+            </div>
+            <h3>Abuja Adventure Hike</h3>
+            <p>Discover Abuja from the top — our guided hike across dramatic granite boulders with breathtaking city and horizon views.</p>
+            <div class="tour-card__footer">
+              <div class="tour-card__price">
+                <span class="tour-card__price-label">From</span>
+                <span class="tour-card__price-amount">Contact for Pricing</span>
+              </div>
+              <a href="https://wa.me/2349098640296?text=Hello%20Adventure%20101%2C%20I%27m%20interested%20in%20the%20Abuja%20Adventure%20Hike." class="btn btn--primary btn--sm" target="_blank" rel="noopener">Enquire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: France -->
+        <article class="tour-card reveal" style="--reveal-delay:0.24s">
+          <div class="tour-card__img-wrap" style="background:#1a1915;min-height:220px;display:flex;align-items:center;justify-content:center;">
+            <img src="images/france_travel.png" alt="Paris and France cultural travel experience" loading="lazy"
+              style="width:100%;height:100%;object-fit:cover;" />
+            <span class="tour-card__badge">International</span>
+          </div>
+          <div class="tour-card__body">
+            <div class="tour-card__meta">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Paris &amp; Beyond, France
+              <span class="tour-card__meta-sep">&#xB7;</span>
+              International
+            </div>
+            <h3>France Cultural Journey</h3>
+            <p>France is not just a country — it's a feeling. We handle visas, accommodation, and curated itineraries for your French experience.</p>
+            <div class="tour-card__footer">
+              <div class="tour-card__price">
+                <span class="tour-card__price-label">From</span>
+                <span class="tour-card__price-amount">Contact for Pricing</span>
+              </div>
+              <a href="https://wa.me/2349098640296?text=Hello%20Adventure%20101%2C%20I%27m%20interested%20in%20the%20France%20Cultural%20Journey." class="btn btn--primary btn--sm" target="_blank" rel="noopener">Enquire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5: Wildlife & Safari -->
+        <article class="tour-card reveal" style="--reveal-delay:0.32s">
+          <div class="tour-card__img-wrap">
+            <img src="images/wildlife_safari.png" alt="Elephant safari scene in Africa" loading="lazy" />
+            <span class="tour-card__badge">Wildlife</span>
+          </div>
+          <div class="tour-card__body">
+            <div class="tour-card__meta">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Nigeria &amp; East Africa
+              <span class="tour-card__meta-sep">&#xB7;</span>
+              Wildlife
+            </div>
+            <h3>Wildlife &amp; Safari</h3>
+            <p>Face to face with Africa's most majestic wildlife. Expert-guided experiences at Sumu Wildlife Park and East African safari destinations.</p>
+            <div class="tour-card__footer">
+              <div class="tour-card__price">
+                <span class="tour-card__price-label">From</span>
+                <span class="tour-card__price-amount">Contact for Pricing</span>
+              </div>
+              <a href="https://wa.me/2349098640296?text=Hello%20Adventure%20101%2C%20I%27m%20interested%20in%20the%20Wildlife%20and%20Safari%20tour." class="btn btn--primary btn--sm" target="_blank" rel="noopener">Enquire</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6: Art & Culture -->
+        <article class="tour-card reveal" style="--reveal-delay:0.4s">
+          <div class="tour-card__img-wrap">
+            <img src="images/nike_gallery.jpg" alt="Art gallery tour with people viewing paintings" loading="lazy" />
+            <span class="tour-card__badge">Cultural</span>
+          </div>
+          <div class="tour-card__body">
+            <div class="tour-card__meta">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Lagos &amp; Abuja, Nigeria
+              <span class="tour-card__meta-sep">&#xB7;</span>
+              Cultural
+            </div>
+            <h3>Art &amp; Culture Tour</h3>
+            <p>Explore Nigeria's vibrant art scene — gallery visits, live demonstrations, and curated cultural experiences in Nigeria's twin capitals.</p>
+            <div class="tour-card__footer">
+              <div class="tour-card__price">
+                <span class="tour-card__price-label">From</span>
+                <span class="tour-card__price-amount">Contact for Pricing</span>
+              </div>
+              <a href="https://wa.me/2349098640296?text=Hello%20Adventure%20101%2C%20I%27m%20interested%20in%20the%20Art%20and%20Culture%20Tour." class="btn btn--primary btn--sm" target="_blank" rel="noopener">Enquire</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- CUSTOM TOUR CTA -->
+      <div class="custom-tour-strip reveal" style="--reveal-delay:0.1s">
+        <span class="label">Bespoke Travel</span>
+        <h2>Don't see your dream destination?</h2>
+        <p>We go anywhere. Tell us where you want to go and we'll build the perfect itinerary around your vision, timeline, and budget.</p>
+        <div class="strip-actions">
+          <a href="https://wa.me/2349098640296?text=Hello%20Adventure%20101%2C%20I%27d%20like%20a%20custom%20tour%20to%20a%20destination%20not%20listed%20on%20your%20website." class="btn btn--primary" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            WhatsApp Us
+          </a>
+          <a href="contact.html" class="btn btn--ghost">Send a Message</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER injected by components.js -->
+  <footer id="site-footer" class="footer"></footer>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
