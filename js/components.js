@@ -1,7 +1,7 @@
 /* ══════════════════════════════════════════════════════════════
-   ADVENTURE 101 TOUR — Shared Components
+    ADVENTURE 101 TOUR: Shared Components
    Injects nav and footer into every page dynamically
-   Dark mode ONLY — no toggle
+    Dark mode ONLY: no toggle
    ══════════════════════════════════════════════════════════════ */
 
 (function () {
