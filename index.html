@@ -25,6 +25,9 @@
         <video class="hero__video" id="heroVid2" muted loop playsinline preload="auto">
           <source src="images/hero_video2.mp4" type="video/mp4" />
         </video>
+        <video class="hero__video" id="heroVid3" muted loop playsinline preload="none">
+          <source src="images/jetski_zanzi_web.mp4" type="video/mp4" />
+        </video>
         <div class="hero__overlay"></div>
       </div>
       <div class="hero__content">
@@ -84,7 +87,7 @@
             <img src="images/hike_abuja.jpg" alt="Adventure 101 group hike on Abuja boulders" loading="lazy" />
           </div>
           <div class="about-strip__img-accent">
-            <img src="images/zanzibar_real.png" alt="Zanzibar beach — Adventure 101 client" loading="lazy" />
+            <img src="images/obudu2_converted.jpg" alt="Obudu mountain landscape — Adventure 101" loading="lazy" style="object-position: center 55%;" />
           </div>
         </div>
       </div>
@@ -284,28 +287,29 @@
   <script src="js/main.js"></script>
 
   <script>
-    // ─── Video crossfade ───
+    // ─── Video crossfade (3 videos, round-robin) ───
     (function () {
-      var v1 = document.getElementById('heroVid1');
-      var v2 = document.getElementById('heroVid2');
-      if (!v1 || !v2) return;
+      var videos = [
+        document.getElementById('heroVid1'),
+        document.getElementById('heroVid2'),
+        document.getElementById('heroVid3')
+      ];
+      if (!videos[0]) return;
 
-      var current = 1;
+      var current = 0;
 
       function crossfade() {
-        if (current === 1) {
-          v2.play();
-          v2.classList.add('active');
-          v1.classList.remove('active');
-          current = 2;
-          setTimeout(function () { v1.currentTime = 0; }, 1200);
-        } else {
-          v1.play();
-          v1.classList.add('active');
-          v2.classList.remove('active');
-          current = 1;
-          setTimeout(function () { v2.currentTime = 0; }, 1200);
-        }
+        var prev = current;
+        current = (current + 1) % videos.length;
+        var incoming = videos[current];
+        var outgoing = videos[prev];
+
+        incoming.play();
+        incoming.classList.add('active');
+        outgoing.classList.remove('active');
+
+        // Reset outgoing after fade is complete
+        setTimeout(function () { outgoing.currentTime = 0; }, 1200);
       }
 
       // Crossfade every 14 seconds
