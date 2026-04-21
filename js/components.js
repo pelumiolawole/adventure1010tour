@@ -1,10 +1,14 @@
 /* ══════════════════════════════════════════════════════════════
    ADVENTURE 101 TOUR — Shared Components
    Injects nav and footer into every page dynamically
+   Dark mode ONLY — no toggle
    ══════════════════════════════════════════════════════════════ */
 
 (function () {
   'use strict';
+
+  // ─── Lock dark mode ───
+  document.documentElement.setAttribute('data-theme', 'dark');
 
   // ─── Detect active page for nav highlighting ───
   const path = window.location.pathname.split('/').pop() || 'index.html';
@@ -42,9 +46,6 @@
           ${buildNavLinks()}
         </nav>
         <div class="nav__actions">
-          <button class="btn btn--ghost" data-theme-toggle aria-label="Toggle theme">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          </button>
           <a href="contact.html" class="btn btn--primary">Book Now</a>
           <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
             <span></span><span></span><span></span>
@@ -119,33 +120,10 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© 2025 Adventure 101 Tour Limited. All rights reserved. · BN 3268546</p>
+        <p>© 2026 Adventure 101 Tour Limited. All rights reserved. · BN 3268546</p>
       </div>
     `;
   }
-
-  // ─── THEME TOGGLE ───
-  const html = document.documentElement;
-  let currentTheme = html.getAttribute('data-theme') || 'dark';
-
-  function applyTheme(theme) {
-    html.setAttribute('data-theme', theme);
-    currentTheme = theme;
-    const btn = document.querySelector('[data-theme-toggle]');
-    if (btn) {
-      btn.innerHTML = theme === 'dark'
-        ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`
-        : `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
-    }
-  }
-
-  applyTheme(currentTheme);
-
-  document.addEventListener('click', (e) => {
-    if (e.target.closest('[data-theme-toggle]')) {
-      applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
-    }
-  });
 
   // ─── NAV SCROLL ───
   const nav = document.getElementById('nav');
@@ -163,8 +141,8 @@
     const menu = document.getElementById('navMobile');
     if (!menu) return;
     const isOpen = menu.classList.toggle('open');
-    burger.setAttribute('aria-expanded', isOpen);
-    menu.setAttribute('aria-hidden', !isOpen);
+    burger.setAttribute('aria-expanded', String(isOpen));
+    menu.setAttribute('aria-hidden', String(!isOpen));
   });
 
   // Close mobile menu on link click

@@ -105,10 +105,10 @@
 }
 
 .service-tile__body {
-  padding: var(--space-5) var(--space-5) var(--space-6);
+  padding: var(--space-6) var(--space-6) var(--space-8);
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-3);
   flex: 1;
 }
 .service-tile__icon { font-size: 1.5rem; line-height: 1; }
@@ -232,7 +232,7 @@
 /* ─── GALLERY STRIP ─── */
 .gallery-strip {
   overflow: hidden;
-  padding-block: var(--space-2);
+  padding-block: var(--space-6);
   background: var(--color-bg);
   border-top: 1px solid var(--color-divider);
   border-bottom: 1px solid var(--color-divider);
