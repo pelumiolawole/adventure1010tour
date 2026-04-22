@@ -97,7 +97,6 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   line-height: 1.65;
-  padding-top: var(--nav-height); /* pushes all page content below fixed nav */
 }
 img, picture, video { display: block; max-width: 100%; height: auto; }
 h1, h2, h3, h4 { text-wrap: balance; line-height: 1.12; font-family: var(--font-display); }
@@ -231,7 +230,7 @@ ul[role='list'], ol[role='list'] { list-style: none; }
    Logo has black triangle + black wordmark: reads clearly on white at all times.
    body padding-top: var(--nav-height) ensures content starts below the bar — not underneath it. */
 .nav {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
