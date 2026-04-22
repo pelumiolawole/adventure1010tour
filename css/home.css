@@ -4,7 +4,7 @@
 
 /* ─── ABOUT STRIP ─── */
 .about-strip {
-  padding-block: clamp(var(--space-16), 8vw, var(--space-32));
+  padding-block: clamp(var(--space-20), 10vw, var(--space-32));
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-divider);
 }
@@ -16,9 +16,9 @@
 }
 @media (max-width: 800px) { .about-strip__inner { grid-template-columns: 1fr; } }
 
-.about-strip__text { display: flex; flex-direction: column; gap: var(--space-5); }
+.about-strip__text { display: flex; flex-direction: column; gap: var(--space-6); }
 .about-strip__text h2 { font-size: var(--text-2xl); }
-.about-strip__text p { color: var(--color-text-muted); line-height: 1.75; max-width: none; }
+.about-strip__text p { color: var(--color-text-muted); line-height: 1.75; max-width: 60ch; }
 
 .about-strip__values {
   display: grid;
@@ -65,7 +65,7 @@
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-5);
+  gap: var(--space-8);
 }
 @media (max-width: 1100px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 580px) { .services-grid { grid-template-columns: 1fr; } }
@@ -113,7 +113,7 @@
 }
 .service-tile__icon { font-size: 1.5rem; line-height: 1; }
 .service-tile__body h3 { font-size: var(--text-base); font-weight: 700; }
-.service-tile__body p { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.6; flex: 1; max-width: none; }
+.service-tile__body p { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.7; flex: 1; max-width: none; }
 .service-tile__cta {
   font-size: var(--text-xs);
   font-weight: 700;
@@ -125,7 +125,7 @@
 /* ─── UPCOMING TOUR BANNER ─── */
 .upcoming-banner {
   background: var(--color-primary);
-  padding-block: clamp(var(--space-12), 6vw, var(--space-20));
+  padding-block: clamp(var(--space-20), 8vw, var(--space-32));
 }
 .upcoming-banner__inner {
   display: grid;
@@ -151,7 +151,7 @@
 .upcoming-banner__left h2 {
   font-size: clamp(1.8rem, 0.8rem + 2.5vw, 2.8rem);
   color: #fff;
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-6);
   line-height: 1.1;
 }
 .upcoming-banner__left p {
