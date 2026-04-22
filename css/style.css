@@ -241,9 +241,9 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   left: 0;
   right: 0;
   z-index: 100;
-  /* Subtle dark gradient at first load — separates nav from video hero without
-     appearing as a solid bar. Fades to transparent downward. */
-  background: linear-gradient(to bottom, rgba(10, 8, 5, 0.55) 0%, transparent 100%);
+  background: rgba(14, 13, 10, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: background 300ms ease, backdrop-filter 300ms ease, box-shadow 300ms ease;
 }
 
@@ -251,7 +251,7 @@ ul[role='list'], ol[role='list'] { list-style: none; }
    Logo has black triangle + black wordmark — renders clearly on white.
    Link and burger colours are overridden to dark below. */
 .nav.scrolled {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
