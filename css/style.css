@@ -124,7 +124,6 @@ ul[role='list'], ol[role='list'] { list-style: none; }
 }
 .section {
   padding-block: clamp(4rem, 12vw, 8rem);
-  margin-top: var(--space-6);
 }
 
 /* ─── TYPOGRAPHY UTILITIES ─── */
