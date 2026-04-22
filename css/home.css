@@ -4,7 +4,7 @@
 
 /* ─── ABOUT STRIP ─── */
 .about-strip {
-  padding-block: clamp(var(--space-20), 10vw, var(--space-32));
+  padding-block: clamp(5rem, 12vw, 8rem);
   background: var(--color-surface);
   border-bottom: 1px solid var(--color-divider);
 }
@@ -16,9 +16,9 @@
 }
 @media (max-width: 800px) { .about-strip__inner { grid-template-columns: 1fr; } }
 
-.about-strip__text { display: flex; flex-direction: column; gap: var(--space-6); }
+.about-strip__text { display: flex; flex-direction: column; gap: var(--space-8); }
 .about-strip__text h2 { font-size: var(--text-2xl); }
-.about-strip__text p { color: var(--color-text-muted); line-height: 1.75; max-width: 60ch; }
+.about-strip__text p { color: var(--color-text-muted); line-height: 1.8; max-width: 60ch; }
 
 .about-strip__values {
   display: grid;
@@ -68,6 +68,7 @@
   gap: var(--space-8);
 }
 @media (max-width: 1100px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 900px) { .services-grid { grid-template-columns: 1fr; gap: var(--space-8); } }
 @media (max-width: 580px) { .services-grid { grid-template-columns: 1fr; } }
 
 .service-tile {
@@ -125,7 +126,7 @@
 /* ─── UPCOMING TOUR BANNER ─── */
 .upcoming-banner {
   background: var(--color-primary);
-  padding-block: clamp(var(--space-20), 8vw, var(--space-32));
+  padding-block: clamp(5rem, 12vw, 8rem);
 }
 .upcoming-banner__inner {
   display: grid;
@@ -157,7 +158,7 @@
 .upcoming-banner__left p {
   color: rgba(255,255,255,0.8);
   font-size: var(--text-base);
-  line-height: 1.7;
+  line-height: 1.8;
   margin-bottom: var(--space-5);
   max-width: none;
 }

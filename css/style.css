@@ -34,7 +34,7 @@
   --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
   --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
   --text-3xl: clamp(2.5rem, 1rem + 4vw, 5rem);
-  --text-hero: clamp(3.2rem, 1rem + 6.5vw, 7rem);
+  --text-hero: clamp(2.5rem, 6vw, 5rem);
 
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -103,6 +103,7 @@ h1, h2, h3, h4 { text-wrap: balance; line-height: 1.1; font-family: var(--font-d
 p, li { text-wrap: pretty; max-width: 60ch; }
 a { color: inherit; text-decoration: none; }
 button { cursor: pointer; background: none; border: none; }
+a, button { min-height: 44px; }
 ul[role='list'], ol[role='list'] { list-style: none; }
 ::selection { background: rgba(168, 103, 4, 0.25); color: var(--color-text); }
 :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
@@ -122,7 +123,8 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   padding-inline: clamp(var(--space-5), 5vw, var(--space-16));
 }
 .section {
-  padding-block: clamp(var(--space-20), 10vw, var(--space-32));
+  padding-block: clamp(4rem, 12vw, 8rem);
+  margin-top: var(--space-6);
 }
 
 /* ─── TYPOGRAPHY UTILITIES ─── */
@@ -240,6 +242,7 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
   transition: box-shadow 300ms ease;
+  overflow: visible;
 }
 
 /* On scroll: only deepen the shadow — background stays the same */
@@ -338,18 +341,22 @@ ul[role='list'], ol[role='list'] { list-style: none; }
 .nav__mobile {
   display: none;
   flex-direction: column;
-  gap: var(--space-5);
-  padding: var(--space-6) clamp(var(--space-5), 5vw, var(--space-16));
+  gap: var(--space-6);
+  padding: var(--space-8) clamp(var(--space-5), 5vw, var(--space-16));
   border-top: 1px solid rgba(0, 0, 0, 0.07);
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  z-index: 101;
 }
 .nav__mobile a {
-  font-size: var(--text-base);
+  font-size: 1.1rem;
   font-weight: 500;
   color: #1a1815;
-  padding: var(--space-2) 0;
+  padding: 0.8rem 0;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
   touch-action: manipulation;
 }
@@ -366,6 +373,7 @@ ul[role='list'], ol[role='list'] { list-style: none; }
 /* ─── HERO (video) ─── */
 .hero {
   position: relative;
+  z-index: 1;
   min-height: 100dvh;
   display: flex;
   align-items: flex-end;
@@ -397,10 +405,10 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(10, 8, 5, 0.2) 0%,
-    rgba(10, 8, 5, 0.1) 35%,
-    rgba(10, 8, 5, 0.65) 72%,
-    rgba(10, 8, 5, 0.93) 100%
+    rgba(10, 8, 5, 0.35) 0%,
+    rgba(10, 8, 5, 0.2) 35%,
+    rgba(10, 8, 5, 0.75) 72%,
+    rgba(10, 8, 5, 0.95) 100%
   );
 }
 
@@ -467,6 +475,7 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   align-items: center;
   gap: var(--space-6);
   flex-wrap: wrap;
+  margin-top: var(--space-8);
 }
 .hero__stat { text-align: left; }
 .hero__stat-num {
@@ -881,10 +890,10 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
-  padding: var(--space-8);
+  padding: var(--space-10);
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-6);
   transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
 }
 .testimonial-card:hover {
@@ -962,7 +971,7 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--space-8);
 }
 .contact-cta__content h2 {
   font-size: var(--text-2xl);
@@ -998,7 +1007,7 @@ ul[role='list'], ol[role='list'] { list-style: none; }
 .footer__inner {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: var(--space-10);
+  gap: var(--space-12);
   padding-block: var(--space-20);
 }
 @media (max-width: 900px) {

@@ -137,6 +137,8 @@
   // ─── MOBILE BURGER ───
   const burgerBtn = document.getElementById('navBurger');
   const mobileMenu = document.getElementById('navMobile');
+  if (!burgerBtn) console.warn('[nav] navBurger not found');
+  if (!mobileMenu) console.warn('[nav] navMobile not found');
   if (burgerBtn && mobileMenu) {
     burgerBtn.addEventListener('click', (e) => {
       e.stopPropagation(); // prevent iOS Safari from re-firing the event up the fixed tree

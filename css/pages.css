@@ -10,7 +10,7 @@
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  padding-bottom: var(--space-16);
+  padding-block: clamp(4rem, 8vw, 6rem);
 }
 
 .page-hero__bg {
@@ -94,6 +94,10 @@
   line-height: 1.7;
 }
 
+.page-hero .breadcrumb { margin-bottom: var(--space-5); }
+.page-hero h1 { margin-top: var(--space-4); margin-bottom: var(--space-5); }
+.page-hero__subtitle { line-height: 1.7; }
+
 /* ─── BREADCRUMB ─── */
 .breadcrumb {
   display: flex;
@@ -123,7 +127,8 @@
 
 /* ─── SECTION LAYOUT ─── */
 .section {
-  padding: clamp(var(--space-20), 10vw, var(--space-32)) var(--space-8);
+  padding-block: clamp(5rem, 12vw, 8rem);
+  padding-inline: var(--space-8);
 }
 
 .section--alt {
@@ -282,6 +287,10 @@
   .tours-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
 }
 
 @media (max-width: 580px) {
@@ -341,7 +350,8 @@
 }
 
 .tour-card__body {
-  padding: var(--space-6);
+  gap: var(--space-4);
+  padding: var(--space-6) var(--space-6) var(--space-8);
 }
 
 .tour-card__region {
@@ -369,6 +379,10 @@
   color: var(--color-text-muted);
   line-height: 1.7;
   margin-bottom: var(--space-5);
+}
+
+.tour-card p {
+  line-height: 1.7;
 }
 
 .tour-card__meta {
@@ -512,7 +526,8 @@
   grid-template-columns: 1fr 1fr;
   gap: clamp(var(--space-10), 6vw, var(--space-20));
   align-items: center;
-  padding: clamp(var(--space-16), 7vw, var(--space-24)) var(--space-8);
+  padding-block: clamp(5rem, 12vw, 8rem);
+  padding-inline: var(--space-8);
   max-width: var(--content-wide);
   margin: 0 auto;
 }
@@ -582,6 +597,11 @@
   color: var(--color-text-muted);
   line-height: 1.75;
   margin-bottom: var(--space-6);
+}
+
+.service-block p {
+  line-height: 1.8;
+  max-width: 60ch;
 }
 
 .service-block__list {
@@ -728,7 +748,7 @@
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: clamp(var(--space-12), 6vw, var(--space-20));
+  gap: var(--space-12);
   align-items: start;
 }
 
@@ -822,6 +842,11 @@
 /* .form-field is used in contact.html — alias to form-group spacing */
 .form-field {
   margin-bottom: var(--space-6);
+}
+
+.contact-form .btn {
+  margin-top: var(--space-8);
+  min-height: 44px;
 }
 
 .form-field label {
@@ -1009,6 +1034,7 @@ select.form-control {
   justify-content: space-between;
   gap: var(--space-4);
   padding: var(--space-5) var(--space-6);
+  min-height: 44px;
   background: none;
   border: none;
   cursor: pointer;
@@ -1505,13 +1531,15 @@ select.form-control {
 /* ─── RESPONSIVE UTILITIES ─── */
 @media (max-width: 1024px) {
   .section {
-    padding: var(--space-20) var(--space-6);
+    padding-block: var(--space-20);
+    padding-inline: var(--space-6);
   }
 }
 
 @media (max-width: 640px) {
   .section {
-    padding: var(--space-20) var(--space-5);
+    padding-block: var(--space-20);
+    padding-inline: var(--space-5);
   }
   .page-hero__content {
     padding: 0 var(--space-5);
