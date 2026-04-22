@@ -245,10 +245,10 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   transition: background var(--transition), backdrop-filter var(--transition), box-shadow var(--transition);
 }
 .nav.scrolled {
-  background: rgba(255, 255, 255, 0.93);
+  background: rgba(14, 13, 10, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
 }
 .nav__inner {
   display: flex;
@@ -309,10 +309,8 @@ ul[role='list'], ol[role='list'] { list-style: none; }
 .nav__links a:hover::after { width: 100%; }
 .nav__links a.active { color: var(--color-primary); }
 .nav__links a.active::after { width: 100%; }
-.nav.scrolled .nav__links a { color: #3a3530; }
-.nav.scrolled .nav__links a:hover { color: #0e0d0a; }
-.nav.scrolled .nav__links a.active { color: var(--color-primary); }
-.nav.scrolled .nav__burger { color: #1a1815; }
+.nav.scrolled .nav__links a { color: var(--color-text-muted); }
+.nav.scrolled .nav__links a:hover { color: var(--color-text); }
 
 .nav__actions {
   display: flex;
@@ -345,17 +343,17 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   flex-direction: column;
   gap: var(--space-5);
   padding: var(--space-6) clamp(var(--space-5), 5vw, var(--space-16));
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  background: rgba(255, 255, 255, 0.97);
+  border-top: 1px solid var(--color-divider);
+  background: rgba(14, 13, 10, 0.97);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
 .nav__mobile a {
   font-size: var(--text-base);
   font-weight: 500;
-  color: #1a1815;
+  color: var(--color-text);
   padding: var(--space-2) 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid var(--color-divider);
   touch-action: manipulation;
 }
 .nav__mobile a.active { color: var(--color-primary); }
@@ -416,6 +414,7 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   max-width: var(--content-wide);
   margin-inline: auto;
   padding-inline: clamp(var(--space-5), 5vw, var(--space-16));
+  padding-top: var(--nav-height);
   width: 100%;
 }
 

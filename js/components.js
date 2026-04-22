@@ -135,15 +135,15 @@
   updateNav();
 
   // ─── MOBILE BURGER ───
-  document.addEventListener('click', (e) => {
-    const burger = e.target.closest('#navBurger');
-    if (!burger) return;
-    const menu = document.getElementById('navMobile');
-    if (!menu) return;
-    const isOpen = menu.classList.toggle('open');
-    burger.setAttribute('aria-expanded', String(isOpen));
-    menu.setAttribute('aria-hidden', String(!isOpen));
-  });
+  const burgerBtn = document.getElementById('navBurger');
+  const mobileMenu = document.getElementById('navMobile');
+  if (burgerBtn && mobileMenu) {
+    burgerBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      burgerBtn.setAttribute('aria-expanded', String(isOpen));
+      mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+    });
+  }
 
   // Close mobile menu on link click
   document.addEventListener('click', (e) => {
