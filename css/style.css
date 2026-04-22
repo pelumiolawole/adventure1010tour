@@ -241,15 +241,22 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   left: 0;
   right: 0;
   z-index: 100;
-  background: transparent;
-  transition: background var(--transition), backdrop-filter var(--transition), box-shadow var(--transition);
+  /* Subtle dark gradient at first load — separates nav from video hero without
+     appearing as a solid bar. Fades to transparent downward. */
+  background: linear-gradient(to bottom, rgba(10, 8, 5, 0.55) 0%, transparent 100%);
+  transition: background 300ms ease, backdrop-filter 300ms ease, box-shadow 300ms ease;
 }
+
+/* White/off-white semi-transparent bar on scroll.
+   Logo has black triangle + black wordmark — renders clearly on white.
+   Link and burger colours are overridden to dark below. */
 .nav.scrolled {
-  background: rgba(14, 13, 10, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: var(--shadow-sm);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.06);
 }
+
 .nav__inner {
   display: flex;
   align-items: center;
@@ -281,7 +288,7 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   height: 44px;
 }
 
-/* Nav links */
+/* Nav links — white by default (readable on dark video hero + gradient) */
 .nav__links {
   display: flex;
   gap: var(--space-8);
@@ -309,8 +316,11 @@ ul[role='list'], ol[role='list'] { list-style: none; }
 .nav__links a:hover::after { width: 100%; }
 .nav__links a.active { color: var(--color-primary); }
 .nav__links a.active::after { width: 100%; }
-.nav.scrolled .nav__links a { color: var(--color-text-muted); }
-.nav.scrolled .nav__links a:hover { color: var(--color-text); }
+
+/* Scrolled state — dark links on white background */
+.nav.scrolled .nav__links a { color: #2a2520; }
+.nav.scrolled .nav__links a:hover { color: #0e0d0a; }
+.nav.scrolled .nav__links a.active { color: var(--color-primary); }
 
 .nav__actions {
   display: flex;
@@ -323,8 +333,10 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   flex-direction: column;
   gap: 5px;
   padding: var(--space-2);
-  color: var(--color-text);
-  touch-action: manipulation; /* removes 300ms tap delay on mobile */
+  color: rgba(255, 255, 255, 0.9); /* white by default — visible on dark hero gradient */
+  touch-action: manipulation;      /* removes 300ms tap delay on mobile */
+  -webkit-tap-highlight-color: transparent; /* iOS Safari: treat as tappable */
+  cursor: pointer;                 /* iOS Safari: required for reliable click events on custom buttons */
 }
 .nav__burger span {
   display: block;
@@ -338,22 +350,25 @@ ul[role='list'], ol[role='list'] { list-style: none; }
 .nav__burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav__burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* Scrolled state — dark burger on white background */
+.nav.scrolled .nav__burger { color: #1a1815; }
+
 .nav__mobile {
   display: none;
   flex-direction: column;
   gap: var(--space-5);
   padding: var(--space-6) clamp(var(--space-5), 5vw, var(--space-16));
-  border-top: 1px solid var(--color-divider);
-  background: rgba(14, 13, 10, 0.97);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 .nav__mobile a {
   font-size: var(--text-base);
   font-weight: 500;
-  color: var(--color-text);
+  color: #1a1815; /* dark text — mobile menu always white background */
   padding: var(--space-2) 0;
-  border-bottom: 1px solid var(--color-divider);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
   touch-action: manipulation;
 }
 .nav__mobile a.active { color: var(--color-primary); }

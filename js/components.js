@@ -138,14 +138,15 @@
   const burgerBtn = document.getElementById('navBurger');
   const mobileMenu = document.getElementById('navMobile');
   if (burgerBtn && mobileMenu) {
-    burgerBtn.addEventListener('click', () => {
+    burgerBtn.addEventListener('click', (e) => {
+      e.stopPropagation(); // prevent iOS Safari from re-firing the event up the fixed tree
       const isOpen = mobileMenu.classList.toggle('open');
       burgerBtn.setAttribute('aria-expanded', String(isOpen));
       mobileMenu.setAttribute('aria-hidden', String(!isOpen));
     });
   }
 
-  // Close mobile menu on link click
+  // Close mobile menu on nav link click
   document.addEventListener('click', (e) => {
     if (e.target.closest('#navMobile a')) {
       const menu = document.getElementById('navMobile');
