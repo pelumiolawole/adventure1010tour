@@ -91,28 +91,6 @@
     window.addEventListener('scroll', heroParallax, { passive: true });
   }
 
-  /* ─── FAQ ACCORDION ─── */
-  const faqItems = document.querySelectorAll('.faq-item');
-  if (faqItems.length) {
-    // Open first item by default
-    faqItems[0].classList.add('is-open');
-    const firstBtn = faqItems[0].querySelector('.faq-question');
-    if (firstBtn) firstBtn.setAttribute('aria-expanded', 'true');
-
-    faqItems.forEach(item => {
-      const btn = item.querySelector('.faq-question');
-      const icon = item.querySelector('.faq-question__icon');
-      if (!btn) return;
-      btn.addEventListener('click', () => {
-        const isOpen = item.classList.toggle('is-open');
-        btn.setAttribute('aria-expanded', String(isOpen));
-        if (icon) icon.textContent = isOpen ? '−' : '+';
-      });
-      // Set initial icon state
-      if (item.classList.contains('is-open') && icon) icon.textContent = '−';
-    });
-  }
-
   /* ─── TOUR CARD HOVER — tactile feedback ─── */
   const tourCards = document.querySelectorAll('.tour-card:not(.tour-card--cta)');
   tourCards.forEach(card => {
