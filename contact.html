@@ -41,7 +41,7 @@
         <!-- LEFT: FORM -->
         <div class="contact-form-wrap reveal">
           <h2 id="contact-heading">Send an Enquiry</h2>
-          <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;margin-bottom:var(--space-6);">Fill in the form below and your message goes directly to our team at <strong style="color:var(--color-text);">info@adventure101tour.com</strong>. We respond to all enquiries within 24 hours; for urgent bookings, WhatsApp is faster.</p>
+          <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;margin-bottom:var(--space-6);">Fill in the form below and your message goes directly to our team at <strong style="color:var(--color-text);">info@adventure101.tours</strong>. We respond to all enquiries within 24 hours; for urgent bookings, WhatsApp is faster.</p>
 
           <!-- Success message (hidden by default) -->
           <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
@@ -105,7 +105,7 @@
             <button type="submit" class="form-submit">Send Enquiry</button>
 
             <p class="form-note">
-              We respond within 24 hours. Your details go to <strong>info@adventure101tour.com</strong>: our team picks up every enquiry personally.<br />
+              We respond within 24 hours. Your details go to <strong>info@adventure101.tours</strong>: our team picks up every enquiry personally.<br />
               For urgent bookings, <a href="https://wa.me/2349098640296" target="_blank" rel="noopener" style="color:var(--color-primary);text-decoration:underline;text-underline-offset:3px;">WhatsApp us directly.</a>
             </p>
           </form>
@@ -160,11 +160,11 @@
               </div>
               <div>
                 <h3>Email</h3>
-                <p>info@adventure101tour.com</p>
+                <p>info@adventure101.tours</p>
               </div>
             </div>
             <div class="contact-card__body">
-              <a href="mailto:info@adventure101tour.com" style="font-size:var(--text-sm);color:var(--color-primary);text-decoration:underline;text-underline-offset:3px;">Send an Email</a>
+              <a href="mailto:info@adventure101.tours" style="font-size:var(--text-sm);color:var(--color-primary);text-decoration:underline;text-underline-offset:3px;">Send an Email</a>
             </div>
           </div>
 
@@ -230,9 +230,9 @@
       // EMAILJS CONFIGURATION
       // ========================================
       // Replace these with your EmailJS credentials from emailjs.com dashboard
-      var EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';      // e.g., 'service_abc123'
-      var EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';    // e.g., 'template_xyz789'
-      var EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';      // e.g., 'abc123_xyz789'
+      var EMAILJS_SERVICE_ID = 'service_rjr6ebj';      // e.g., 'service_abc123'
+      var EMAILJS_TEMPLATE_ID = 'template_wnqnmzc';    // e.g., 'template_xyz789'
+      var EMAILJS_PUBLIC_KEY = 'byTDmQkqYb04gtdrk';      // e.g., 'abc123_xyz789'
 
       // Initialize EmailJS (only if credentials are set)
       if (EMAILJS_PUBLIC_KEY && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
@@ -273,13 +273,12 @@
 
           // Prepare email payload
           var emailData = {
-            to_email: 'info@adventure101tour.com',
-            from_name: form.fullName.value,
-            from_email: form.emailAddress.value,
-            phone: form.phoneNumber.value,
-            service: form.serviceInterest.value || 'General Enquiry',
-            destination: form.destination.value || 'Not specified',
-            message: form.message.value || 'No additional message'
+            from_name:        form.fullName.value,
+            reply_to:         form.emailAddress.value,
+            phone:            form.phoneNumber.value,
+            service_interest: form.serviceInterest.value || 'General Enquiry',
+            destination:      form.destination.value || 'Not specified',
+            message:          form.message.value || 'No additional message'
           };
 
           // Send via EmailJS (if configured)
