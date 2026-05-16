@@ -213,7 +213,7 @@
       background: var(--color-surface);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-lg);
-      padding: var(--space-6) var(--space-8); /* was var(--space-5) var(--space-6) */
+      padding: var(--space-7) var(--space-8);
       transition: border-color 200ms ease;
     }
     .contact-card:hover {
@@ -250,6 +250,7 @@
     }
     .contact-card__body {
       padding-left: calc(40px + var(--space-4));
+      padding-top: var(--space-1);
     }
 
     .office-hours {
@@ -309,6 +310,7 @@
       background: var(--color-primary-highlight);
     }
   </style>
+<base target="_blank">
 </head>
 <body>
 
@@ -388,11 +390,6 @@
                 <option value="VisaDesk">VisaDesk</option>
                 <option value="General Enquiry">General Enquiry</option>
               </select>
-            </div>
-
-            <div class="form-field">
-              <label for="destination">Preferred Destination</label>
-              <input class="form-control" type="text" id="destination" name="destination" placeholder="e.g. Zanzibar, Paris, Abuja&#x2026;" autocomplete="off" />
             </div>
 
             <div class="form-field">
