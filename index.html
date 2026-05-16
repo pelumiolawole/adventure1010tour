@@ -12,6 +12,7 @@
 </head>
 <body>
 
+  <div class="scroll-progress" id="scrollProgress"></div>
   <header class="nav" id="nav"></header>
 
   <main>
@@ -64,7 +65,7 @@
     <!-- ABOUT STRIP -->
     <section class="about-strip" id="about">
       <div class="container about-strip__inner">
-        <div class="about-strip__text reveal">
+        <div class="about-strip__text reveal slide-left">
           <span class="label">Who We Are</span>
           <h2>From Abuja Hiking Group<br />to Premium Travel Company</h2>
           <p>Adventure 101 started in 2020 as a hiking group based in Abuja, organising local travel and tour services across Nigeria. We have since grown into a premium, high-end travel experience company, moving beyond standard itineraries to build immersive, truly personal journeys for our clients.</p>
@@ -76,7 +77,7 @@
           </div>
           <a href="services.html" class="btn btn--primary">Our Services</a>
         </div>
-        <div class="about-strip__images reveal" style="--reveal-delay:0.15s">
+        <div class="about-strip__images reveal slide-right" style="--reveal-delay:0.15s">
           <div class="about-strip__img-main">
             <img src="images/hike_abuja.jpg" alt="Adventure 101 group hike on Abuja boulders" loading="lazy" />
           </div>
@@ -230,7 +231,7 @@
             <p>"Adventure101Tour made my dream trip a reality! From the moment I booked my adventure to the last day of our tour, everything was seamless."</p>
             <footer class="testimonial-card__author">
               <div class="testimonial-card__avatar">TD</div>
-              <div><strong>Titilayo Deji</strong><span>Group Tour, Nigeria</span></div>
+              <div><strong>Titilayo Deji</strong></div>
             </footer>
           </blockquote>
           <blockquote class="testimonial-card reveal" style="--reveal-delay:0.1s">
@@ -238,7 +239,7 @@
             <p>"Adventure101Tour is in a league of its own. The attention to detail and the level of care they put into each trip is outstanding. I recently joined their expedition to Nigeria, and it was an eye-opening experience."</p>
             <footer class="testimonial-card__author">
               <div class="testimonial-card__avatar">ZI</div>
-              <div><strong>Zubi Ike</strong><span>Nigeria Expedition</span></div>
+              <div><strong>Zubi Ike</strong></div>
             </footer>
           </blockquote>
           <blockquote class="testimonial-card reveal" style="--reveal-delay:0.2s">
@@ -246,7 +247,7 @@
             <p>"As a solo traveler, I was a bit nervous about going on an adventure with a group, but Adventure101Tour made me feel like part of a family."</p>
             <footer class="testimonial-card__author">
               <div class="testimonial-card__avatar">AU</div>
-              <div><strong>Alex Utobo</strong><span>Solo Traveler</span></div>
+              <div><strong>Alex Utobo</strong></div>
             </footer>
           </blockquote>
         </div>
@@ -256,7 +257,7 @@
     <!-- CONTACT CTA -->
     <section class="contact-cta">
       <div class="contact-cta__bg">
-        <img src="images/obudu1_converted.jpg" alt="Adventure landscape" loading="lazy" style="object-position: center 35%;" />
+        <img src="images/zanzibar_real.png" alt="Zanzibar ocean view" loading="lazy" style="object-position: center 40%;" />
         <div class="contact-cta__overlay"></div>
       </div>
       <div class="container contact-cta__content">
@@ -280,36 +281,6 @@
   <script src="js/components.js"></script>
   <script src="js/main.js"></script>
 
-  <script>
-    // ─── Video crossfade (3 videos, round-robin) ───
-    (function () {
-      var videos = [
-        document.getElementById('heroVid1'),
-        document.getElementById('heroVid2'),
-        document.getElementById('heroVid3')
-      ];
-      if (!videos[0]) return;
-
-      var current = 0;
-
-      function crossfade() {
-        var prev = current;
-        current = (current + 1) % videos.length;
-        var incoming = videos[current];
-        var outgoing = videos[prev];
-
-        incoming.play();
-        incoming.classList.add('active');
-        outgoing.classList.remove('active');
-
-        // Reset outgoing after fade is complete
-        setTimeout(function () { outgoing.currentTime = 0; }, 1200);
-      }
-
-      // Crossfade every 14 seconds
-      setInterval(crossfade, 14000);
-    })();
-  </script>
 
 </body>
 </html>

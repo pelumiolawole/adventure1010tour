@@ -31,43 +31,16 @@
     });
   }
 
-  /* ─── NAV SCROLL BEHAVIOUR ─── */
-  const nav = document.getElementById('nav');
-  const navLinks = document.querySelectorAll('.nav__links a, .nav__mobile a');
-  let lastScrollY = 0;
-
-  function updateNav() {
-    const scrollY = window.scrollY;
-    if (scrollY > 60) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
+  /* ─── SCROLL PROGRESS BAR ─── */
+  const scrollProgress = document.getElementById('scrollProgress');
+  if (scrollProgress) {
+    function updateScrollProgress() {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? window.scrollY / docHeight : 0;
+      scrollProgress.style.transform = `scaleX(${Math.min(progress, 1)})`;
     }
-    lastScrollY = scrollY;
-  }
-
-  window.addEventListener('scroll', updateNav, { passive: true });
-  updateNav();
-
-  /* ─── MOBILE MENU ─── */
-  const burger = document.getElementById('navBurger');
-  const mobileMenu = document.getElementById('navMobile');
-
-  if (burger && mobileMenu) {
-    burger.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      burger.setAttribute('aria-expanded', isOpen);
-      mobileMenu.setAttribute('aria-hidden', !isOpen);
-    });
-
-    // Close on link click
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        burger.setAttribute('aria-expanded', 'false');
-        mobileMenu.setAttribute('aria-hidden', 'true');
-      });
-    });
+    window.addEventListener('scroll', updateScrollProgress, { passive: true });
+    updateScrollProgress();
   }
 
   /* ─── SCROLL REVEAL ─── */
@@ -118,30 +91,7 @@
     window.addEventListener('scroll', heroParallax, { passive: true });
   }
 
-  /* ─── SMOOTH ACTIVE NAV LINK HIGHLIGHT ─── */
-  const sections = document.querySelectorAll('section[id]');
-
-  function highlightActiveSection() {
-    const scrollY = window.scrollY + 120;
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-      const sectionId = section.getAttribute('id');
-
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  }
-
-  window.addEventListener('scroll', highlightActiveSection, { passive: true });
-
-  /* ─── TOUR CARD HOVER — micro-sound-like tactile feedback ─── */
+  /* ─── TOUR CARD HOVER — tactile feedback ─── */
   const tourCards = document.querySelectorAll('.tour-card:not(.tour-card--cta)');
   tourCards.forEach(card => {
     card.addEventListener('mouseenter', () => {
