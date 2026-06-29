@@ -121,6 +121,11 @@
       </div>
       <div class="footer__bottom">
         <p>© 2026 Adventure 101 Tour Limited. All rights reserved. · BN 3268546</p>
+        <p class="footer__legal">
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <span aria-hidden="true">·</span>
+          <a href="privacy.html">Privacy Policy</a>
+        </p>
       </div>
     `;
   }
