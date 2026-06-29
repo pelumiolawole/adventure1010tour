@@ -312,6 +312,7 @@
   gap: var(--space-3);
   animation: gallery-scroll 30s linear infinite;
   width: max-content;
+  will-change: transform;
 }
 
 .gallery-strip__track:hover { animation-play-state: paused; }

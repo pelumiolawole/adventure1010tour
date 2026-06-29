@@ -43,7 +43,13 @@
   padding-top: 120px;
 }
 
-.page-hero .breadcrumb { margin-bottom: var(--space-5); }
+.page-hero .breadcrumb {
+  margin-bottom: var(--space-5);
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeInUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0s;
+}
 
 .page-hero h1 {
   font-size: var(--text-2xl);
@@ -53,6 +59,10 @@
   color: #faf9f6;
   max-width: 720px;
   margin: var(--space-4) 0 var(--space-4);
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.1s;
 }
 
 .page-hero h1 em { font-style: italic; color: var(--color-primary); }
@@ -62,6 +72,10 @@
   color: rgba(250,249,246,0.75);
   max-width: 560px;
   line-height: 1.75;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
 }
 
 @media (max-width: 640px) {
@@ -591,17 +605,9 @@ button.form-submit:active { transform: translateY(0); }
 .whatsapp-float { position: fixed; bottom: var(--space-8); right: var(--space-8); z-index: 900; display: flex; align-items: center; gap: var(--space-3); background: #25D366; color: #fff; font-size: var(--text-sm); font-weight: 600; padding: var(--space-3) var(--space-6); border-radius: var(--radius-full); text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform var(--transition), box-shadow var(--transition); }
 .whatsapp-float:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(37,211,102,0.5); }
 
-/* ─── SCROLL REVEAL ─── */
-.reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out); transition-delay: var(--reveal-delay, 0s); }
-.reveal.is-visible, .reveal.revealed { opacity: 1; transform: translateY(0); }
-
-/* ─── FADE IN UP ─── */
-.fade-in-up { opacity: 0; transform: translateY(24px); animation: fadeInUp 0.7s var(--ease-out) forwards; animation-delay: var(--delay, 0s); }
-@keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
-
 /* ─── LEGAL PAGES (terms.html, privacy.html) ─── */
 .legal-content { max-width: 72ch; margin: 0 auto; padding-block: var(--space-12); }
-.legal-meta { font-size: var(--text-sm); color: var(--color-text-faint); margin-bottom: var(--space-8); }
+.legal-meta { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-8); }
 .legal-content h2 { font-size: var(--text-xl); font-weight: 700; color: var(--color-text); margin-top: var(--space-12); margin-bottom: var(--space-4); padding-top: var(--space-8); border-top: 1px solid var(--color-border); }
 .legal-content h2:first-of-type { border-top: none; padding-top: 0; margin-top: var(--space-8); }
 .legal-content h3 { font-size: var(--text-base); font-weight: 600; color: var(--color-text); margin-top: var(--space-6); margin-bottom: var(--space-2); }
@@ -610,4 +616,7 @@ button.form-submit:active { transform: translateY(0); }
 .legal-content li { margin-bottom: var(--space-2); }
 .legal-content a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; }
 .legal-cta { margin-top: var(--space-16); padding-top: var(--space-8); border-top: 1px solid var(--color-border); }
+
+/* ─── BLOG CTA RESPONSIVE ─── */
+@media (max-width: 720px) { #blogCta { grid-template-columns: 1fr !important; } }
 .legal-cta p { font-size: var(--text-base); color: var(--color-text-muted); margin-bottom: var(--space-6); }

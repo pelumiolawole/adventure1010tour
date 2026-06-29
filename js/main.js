@@ -115,40 +115,6 @@
     }, 500);
   }
 
-  /* ─── MOTION LIBRARY — enhanced scroll animations (if available) ─── */
-  function initMotionAnimations() {
-    if (typeof Motion === 'undefined') return;
-
-    const { animate, scroll, inView } = Motion;
-
-    // Counter animation for hero stats
-    const statNums = document.querySelectorAll('.hero__stat-num');
-    statNums.forEach(el => {
-      const text = el.textContent.trim();
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(12px)';
-
-      inView(el, () => {
-        animate(el, { opacity: 1, y: [12, 0] }, { duration: 0.6, delay: 0.2, easing: [0.16, 1, 0.3, 1] });
-      }, { margin: '-20% 0px' });
-    });
-
-    // Stagger tour cards using Motion
-    const cards = document.querySelectorAll('.tour-card');
-    inView('.tours__grid', () => {
-      cards.forEach((card, i) => {
-        animate(card, { opacity: [0, 1], y: [30, 0] }, {
-          duration: 0.55,
-          delay: i * 0.08,
-          easing: [0.16, 1, 0.3, 1]
-        });
-      });
-    }, { margin: '-15% 0px' });
-  }
-
-  // Init after a short delay to ensure Motion is loaded
-  setTimeout(initMotionAnimations, 300);
-
   /* ─── DESTINATIONS BAR — pause on hover ─── */
   const destTrack = document.querySelector('.destinations-bar__track');
   if (destTrack) {
