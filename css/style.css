@@ -107,7 +107,7 @@ body {
   font-size: var(--text-base);
   color: var(--color-text);
   background-color: var(--color-bg);
-  line-height: 1.7;
+  line-height: 1.75;
 }
 img, picture, video { display: block; max-width: 100%; height: auto; }
 h1, h2, h3, h4 { text-wrap: balance; line-height: 1.1; font-family: var(--font-display); }
@@ -167,7 +167,7 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   font-size: var(--text-base);
   color: var(--color-text-muted);
   margin-inline: auto;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 /* ─── BUTTONS ─── */
@@ -178,6 +178,7 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 600;
+  letter-spacing: 0.02em;
   padding: 0.75em 1.6em;
   border-radius: var(--radius-full);
   border: 2px solid transparent;
@@ -192,8 +193,8 @@ ul[role='list'], ol[role='list'] { list-style: none; }
 .btn--primary { background: var(--color-primary); color: #fff; }
 .btn--primary:hover { background: var(--color-primary-hover); box-shadow: 0 8px 24px rgba(168, 103, 4, 0.4); }
 
-.btn--ghost { background: transparent; color: var(--color-text); border-color: var(--color-border); padding: 0.6em 0.8em; }
-.btn--ghost:hover { background: var(--color-surface-offset); }
+.btn--ghost { background: transparent; color: var(--color-text); border-color: var(--color-border); padding: 0.7em 1.5em; }
+.btn--ghost:hover { background: var(--color-surface-offset); border-color: var(--color-primary); }
 
 .btn--hero { background: var(--color-primary); color: #fff; font-size: var(--text-base); padding: 0.9em 2em; border-radius: var(--radius-full); }
 .btn--hero:hover { background: var(--color-primary-hover); box-shadow: 0 12px 32px rgba(168, 103, 4, 0.45); }
@@ -264,16 +265,18 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   position: absolute;
   bottom: -3px;
   left: 0;
-  width: 0;
+  width: 100%;
   height: 2px;
   background: var(--color-primary);
-  transition: width var(--transition);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
   border-radius: var(--radius-full);
 }
 .nav__links a:hover { color: #e8e2d8; }
-.nav__links a:hover::after { width: 100%; }
+.nav__links a:hover::after { transform: scaleX(1); }
 .nav__links a.active { color: var(--color-primary); }
-.nav__links a.active::after { width: 100%; }
+.nav__links a.active::after { transform: scaleX(1); }
 
 .nav__actions { display: flex; align-items: center; gap: var(--space-3); }
 
