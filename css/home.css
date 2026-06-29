@@ -38,7 +38,7 @@
 .about-strip__values {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-3);
+  gap: var(--space-4);
 }
 
 @media (max-width: 500px) {
@@ -155,14 +155,14 @@
   gap: var(--space-2);
 }
 
-.service-tile__icon { font-size: 1.4rem; line-height: 1; margin-bottom: var(--space-1); }
+.service-tile__icon { display: flex; align-items: center; color: var(--color-primary); margin-bottom: var(--space-2); }
 
 .service-tile__body h3 { font-size: var(--text-lg); font-weight: 700; color: #fff; }
 
 .service-tile__body p {
   font-size: var(--text-sm);
   color: rgba(255,255,255,0.72);
-  line-height: 1.6;
+  line-height: 1.75;
   max-width: none;
   display: -webkit-box;
   -webkit-line-clamp: 2;

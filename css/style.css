@@ -420,7 +420,7 @@ ul[role='list'], ol[role='list'] { list-style: none; }
   color: rgba(255,255,255,0.75);
   max-width: 520px;
   margin-bottom: var(--space-8);
-  line-height: 1.65;
+  line-height: 1.75;
 }
 
 .hero__ctas { display: flex; gap: var(--space-4); flex-wrap: wrap; margin-bottom: var(--space-12); }
@@ -446,7 +446,7 @@ ul[role='list'], ol[role='list'] { list-style: none; }
 .hero__stat-label {
   display: block;
   font-size: var(--text-xs);
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.7);
   letter-spacing: 0.06em;
   margin-top: 0.2em;
 }
