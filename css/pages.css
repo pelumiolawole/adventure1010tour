@@ -311,8 +311,9 @@
 .accordion-item.open .accordion-trigger { color: var(--color-primary); }
 .accordion-icon { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--color-border); display: flex; align-items: center; justify-content: center; color: var(--color-text-muted); transition: transform var(--transition), border-color var(--transition), color var(--transition); }
 .accordion-item.open .accordion-icon { transform: rotate(45deg); border-color: var(--color-primary); color: var(--color-primary); }
-.accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease-out); }
-.accordion-body__inner { padding: 0 var(--space-6) var(--space-6); font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.75; }
+.accordion-body { display: grid; grid-template-rows: 0fr; overflow: hidden; transition: grid-template-rows 0.4s var(--ease-out); }
+.accordion-item.open .accordion-body { grid-template-rows: 1fr; }
+.accordion-body__inner { min-height: 0; padding: 0 var(--space-6) var(--space-6); font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.75; }
 .accordion-body__inner a { color: var(--color-primary); text-decoration: none; }
 .accordion-body__inner a:hover { text-decoration: underline; }
 
@@ -324,9 +325,9 @@
 .faq-question__text { flex: 1; }
 .faq-question__icon { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid var(--color-border); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; line-height: 1; color: var(--color-text-muted); transition: transform var(--transition), border-color var(--transition), color var(--transition); }
 .faq-item.active .faq-question__icon { border-color: var(--color-primary); color: var(--color-primary); }
-.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.45s var(--ease-out); }
-.faq-item.active .faq-answer { max-height: 800px; }
-.faq-answer__inner { padding: var(--space-5) var(--space-6) var(--space-6); font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.75; }
+.faq-answer { display: grid; grid-template-rows: 0fr; overflow: hidden; transition: grid-template-rows 0.45s var(--ease-out); }
+.faq-item.active .faq-answer { grid-template-rows: 1fr; }
+.faq-answer__inner { min-height: 0; padding: var(--space-5) var(--space-6) var(--space-6); font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.75; }
 .faq-answer__inner a { color: var(--color-primary); text-decoration: none; }
 .faq-answer__inner a:hover { text-decoration: underline; }
 .faq-answer__inner strong { color: var(--color-text); font-weight: 600; }
@@ -581,3 +582,16 @@ button.form-submit:active { transform: translateY(0); }
 /* ─── FADE IN UP ─── */
 .fade-in-up { opacity: 0; transform: translateY(24px); animation: fadeInUp 0.7s var(--ease-out) forwards; animation-delay: var(--delay, 0s); }
 @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+/* ─── LEGAL PAGES (terms.html, privacy.html) ─── */
+.legal-content { max-width: 72ch; margin: 0 auto; padding-block: var(--space-12); }
+.legal-meta { font-size: var(--text-sm); color: var(--color-text-faint); margin-bottom: var(--space-8); }
+.legal-content h2 { font-size: var(--text-xl); font-weight: 700; color: var(--color-text); margin-top: var(--space-12); margin-bottom: var(--space-4); padding-top: var(--space-8); border-top: 1px solid var(--color-border); }
+.legal-content h2:first-of-type { border-top: none; padding-top: 0; margin-top: var(--space-8); }
+.legal-content h3 { font-size: var(--text-base); font-weight: 600; color: var(--color-text); margin-top: var(--space-6); margin-bottom: var(--space-2); }
+.legal-content p { color: var(--color-text-muted); line-height: 1.8; margin-bottom: var(--space-4); max-width: none; }
+.legal-content ul { color: var(--color-text-muted); line-height: 1.8; margin: var(--space-4) 0 var(--space-4) var(--space-6); }
+.legal-content li { margin-bottom: var(--space-2); }
+.legal-content a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 3px; }
+.legal-cta { margin-top: var(--space-16); padding-top: var(--space-8); border-top: 1px solid var(--color-border); }
+.legal-cta p { font-size: var(--text-base); color: var(--color-text-muted); margin-bottom: var(--space-6); }
