@@ -1,0 +1,150 @@
+[
+  {
+    "page": "index",
+    "viewport": "desktop",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  },
+  {
+    "page": "tours",
+    "viewport": "desktop",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  },
+  {
+    "page": "services",
+    "viewport": "desktop",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  },
+  {
+    "page": "contact",
+    "viewport": "desktop",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "emailjs is not defined"
+    ]
+  },
+  {
+    "page": "faq",
+    "viewport": "desktop",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  },
+  {
+    "page": "blog",
+    "viewport": "desktop",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  },
+  {
+    "page": "terms",
+    "viewport": "desktop",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  },
+  {
+    "page": "privacy",
+    "viewport": "desktop",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  },
+  {
+    "page": "index",
+    "viewport": "mobile",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  },
+  {
+    "page": "tours",
+    "viewport": "mobile",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  },
+  {
+    "page": "services",
+    "viewport": "mobile",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  },
+  {
+    "page": "contact",
+    "viewport": "mobile",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED",
+      "emailjs is not defined"
+    ]
+  },
+  {
+    "page": "faq",
+    "viewport": "mobile",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  },
+  {
+    "page": "blog",
+    "viewport": "mobile",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  },
+  {
+    "page": "terms",
+    "viewport": "mobile",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  },
+  {
+    "page": "privacy",
+    "viewport": "mobile",
+    "status": "ok",
+    "errors": [
+      "Failed to load resource: net::ERR_FAILED",
+      "Failed to load resource: net::ERR_FAILED"
+    ]
+  }
+]
